@@ -1,0 +1,76 @@
+package Lista7;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ComissaoVendedor {
+    public static void main(String[] args) {
+    Salarios();    
+    }
+
+public static void Salarios(){
+    Scanner scanner = new Scanner(System.in);
+    ArrayList <Double> vendedores = new ArrayList<Double>();
+    Double comissao = 0.0;
+    Double salarios;
+    Double vendas = 0.0;
+    int cont1 = 0;
+    int cont2 = 0;
+    int cont3 = 0;
+    int cont4 = 0;
+    int cont5 = 0;
+    int cont6 = 0;
+    int cont7 = 0;
+    int cont8 = 0;
+    int cont9 = 0;
+    while (vendas != -1) {
+     System.out.println("Digite o valor da venda bruta de seu funcionário, se não houver mais funcionários digite [-1]:");
+     vendas = scanner.nextDouble();
+    if (vendas != -1) {
+    comissao = vendas * 0.09;
+     salarios = comissao + 200;
+     vendedores.add(salarios);
+    }
+ 
+    }   
+    for (Double salario : vendedores) {
+    if (salario >= 200 && salario <= 299) {;
+    cont1++; 
+    }
+    else if (salario >= 300 && salario <= 399 ) {
+    cont2++;   
+    }
+         else if (salario >= 400 && salario <= 499 ) {
+    cont3++;   
+    }
+        else if (salario >= 500 && salario <= 599 ) {
+    cont4++;   
+    }
+        else if (salario >= 600 && salario <= 699 ) {
+    cont5++;   
+    }
+        else if (salario >= 700 && salario <= 799 ) {
+    cont6++;   
+    }
+        else if (salario >= 800 && salario <= 899 ) {
+    cont7++;   
+    }
+        else if (salario >= 900 && salario <= 999 ) {
+    cont8++;   
+    }
+        else if (salario >=  1000 ) {
+    cont9++;   
+    }
+   
+   } 
+    System.out.println("Quantidade de pessoas que recebe entre $200 - $299 é: " + cont1); 
+    System.out.println("Quantidade de pessoas que recebe entre $300 - $399 é: " + cont2); 
+    System.out.println("Quantidade de pessoas que recebe entre $400 - $499 é: " + cont3); 
+    System.out.println("Quantidade de pessoas que recebe entre $500 - $599 é: " + cont4); 
+    System.out.println("Quantidade de pessoas que recebe entre $600 - $699 é: " + cont5); 
+    System.out.println("Quantidade de pessoas que recebe entre $700 - $799 é: " + cont6); 
+    System.out.println("Quantidade de pessoas que recebe entre $800 - $899 é: " + cont7); 
+    System.out.println("Quantidade de pessoas que recebe entre $900 - $999 é: " + cont8);
+    System.out.println("Quantidade de pessoas que recebem acima de 1000 é: " + cont9); 
+}
+}
