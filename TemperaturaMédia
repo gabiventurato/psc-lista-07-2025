@@ -1,0 +1,36 @@
+package Lista7;
+
+
+    import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TemperaturaMédia {
+    public static void main(String[] args) {
+        temperatura();
+    }
+
+    public static void temperatura(){
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Double> temperaturas = new ArrayList<Double>();
+        String[] meses = {
+                "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+                "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+        };
+        Double temp;
+        Double soma = 0.0;
+        Double media; 
+        for (int i = 0; i < meses.length; i++) {
+            System.out.println("Digite a temperatura média de " + meses[i] + ":");
+            temp = scanner.nextDouble();
+            soma+= temp;
+            temperaturas.add(temp);   
+        }
+        media = soma/temperaturas.size();
+        for(int i = 0; i<temperaturas.size(); i++){ 
+    if (temperaturas.get(i) > media) {
+    System.out.println("A média do mês " + meses[i] + " é superior a media anual");    
+    }
+        }
+        
+        } 
+            }
