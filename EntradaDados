@@ -1,0 +1,50 @@
+package Lista7;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class EntradaDados {
+    public static void main(String[] args) {
+    Dados();        
+    }
+    public static void Dados(){
+    Scanner scanner = new Scanner(System.in);
+    ArrayList<Double> numeros = new ArrayList<Double>();
+    Double soma = 0.0;
+    Double notas = 0.0;
+    Double media;
+    int acimaMedia = 0;
+    int menorSete = 0;
+    while (notas != -1) {
+     System.out.println("Digite o valor da nota:");
+     notas = scanner.nextDouble();
+    if (notas != -1) {
+     numeros.add(notas);
+     soma += notas; 
+    }
+    }
+     media =(soma / numeros.size());
+    System.out.println("A quantidade de valores lidos foi " + numeros.size());
+    System.out.println("Números em ordem: ");
+    for(Double valor : numeros){
+        System.out.print (valor);
+    }
+    System.out.println("\nNúmeros em ordem inversa: ");
+       for(int i = numeros.size() - 1; i >=0; i-- ){
+        System.out.println(numeros.get(i));
+    }
+    System.out.println("A soma ds notas é: " + soma);
+    System.out.println("A média é: " + media);
+     for(Double valor : numeros){
+        if (valor > media) {
+        acimaMedia++;
+        }
+        else if (valor < 7) {
+        menorSete++;  
+        }
+    }
+    System.out.println("A quantidade de valores acima da média é de: " + acimaMedia);
+    System.out.println("A quantidade de notas abaixo de 7 é de: " + menorSete); 
+    System.out.println("PROGRAMA FINALIZADO!");
+   }
+}
